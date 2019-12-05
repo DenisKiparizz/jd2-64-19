@@ -6,7 +6,7 @@
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
     <servlet-name>DenisWithUseXMLServlet</servlet-name>
-    <servlet-class>parent.ob-web.HelloServlet</servlet-class>
+    <servlet-class>by.it.academy.ob.HelloServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DenisWithUseXMLServlet</servlet-name>
