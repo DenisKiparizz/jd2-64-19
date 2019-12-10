@@ -27,7 +27,7 @@ public class UpdateServlet extends HttpServlet {
         String id = req.getParameter("id");
         Model model = new Model(name, description, null);
         service.update(model);
-//      resp.sendRedirect(req.getContextPath() + "/list");
+      resp.sendRedirect(req.getContextPath() + "/list");
 
     }
 }

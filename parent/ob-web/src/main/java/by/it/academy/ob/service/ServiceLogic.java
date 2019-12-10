@@ -1,7 +1,8 @@
 package by.it.academy.ob.service;
 
-    import by.it.academy.ob.model.Model;
-    import java.util.ArrayList;
+import by.it.academy.ob.model.Model;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class ServiceLogic implements ServiceInterface {
@@ -11,13 +12,12 @@ public class ServiceLogic implements ServiceInterface {
     private int nomber;
 
 
-
     public static ServiceInterface getService() {
         return INSTANCE;
     }
 
     public ServiceLogic() {
-        id=100L;
+        id = 100L;
         list = new ArrayList<>();
     }
 
@@ -32,29 +32,22 @@ public class ServiceLogic implements ServiceInterface {
         task.setId(id++);
         list.add(task);
     }
-//    @Override
-//    public void deliteService(Long id) {
-//        for (Model a : list) {
-//            if (a.getId()==id) {
-//                list.remove(a);
-//            }
-//        }
-//    }
-            @Override
-            public void update (Model model){
-                for (Model a: list) {
-                    if (a.getId().equals(model.getId())) {
-                        a.setNomber(nomber++);
-                        a.setId(id++);
-                        a.setNameOfService(model.getNameOfService());
-                        a.setDescription(model.getDescription());
-                    }
-                }
-            }
 
-            @Override
-            public void deliteService1 (Long id){
-                list.removeIf(a -> a.getId().equals(id));
+    @Override
+    public void update(Model model) {
+        for (Model a : list) {
+            if (a.getId().equals(model.getId())) {
+                a.setNomber(nomber++);
+                a.setId(id++);
+                a.setNameOfService(model.getNameOfService());
+                a.setDescription(model.getDescription());
             }
-
         }
+    }
+
+    @Override
+    public void deliteService1(Long id) {
+        list.removeIf(a -> a.getId().equals(id));
+    }
+
+}
