@@ -8,6 +8,7 @@ import java.util.List;
 public class ServiceLogic implements ServiceInterface {
     public static final ServiceInterface INSTANCE = new ServiceLogic();
     public final List<Model> list;
+    //AtomicLomg id;
     private Long id;
     private int nomber;
 
@@ -23,12 +24,15 @@ public class ServiceLogic implements ServiceInterface {
 
     @Override
     public List<Model> getListServices() {
+        // return new list
         return list;
     }
 
     @Override
     public void addNewService(Model task) {
         task.setNomber(nomber++);
+        // id++;
+        //id.incrementAndGet;
         task.setId(id++);
         list.add(task);
     }

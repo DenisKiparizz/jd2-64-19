@@ -22,6 +22,6 @@ public class ListWithServicesServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Model> allModels =service.getListServices();
         req.setAttribute("list",allModels);
-        req.getRequestDispatcher("/WEB-INF/showListServices.jsp").forward(req,resp);
+        req.getRequestDispatcher("/WEB-INF/jsp/car_service_orders/showListServices.jsp").forward(req,resp);
     }
 }
