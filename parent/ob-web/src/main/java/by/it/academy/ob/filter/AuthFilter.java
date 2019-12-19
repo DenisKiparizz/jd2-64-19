@@ -26,9 +26,7 @@ public class AuthFilter extends HttpFilter {
 
         logger.debug("url: {}", req.getRequestURI());
 
-      Optional<User> user = (Optional<User>) session.getAttribute("user");
-
-//        User user = (User) session.getAttribute("user");
+        User user = (User) session.getAttribute("user");
 
         if (user == null
                 && !req.getRequestURI().endsWith("/")

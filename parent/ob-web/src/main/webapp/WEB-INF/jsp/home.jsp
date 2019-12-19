@@ -9,10 +9,16 @@
     <title>Welcome</title>
 </head>
 <body>
-<h4>Welcome to main menu West Cost Customs</h4>
-<h5> We really glad to see you in our company and bla bla bla</h5>
+
 <%@include file="include/header.jsp"%>
+<h2><fmt:message key="home.page.header"/></h2>
+
+
+
 <%@include file="include/menu.jsp"%>
+
+<h2><fmt:message key="home.page.text"/> </h2>
+<h1><fmt:message key="home.page.text1"/> </h1>
 
 <jsp:include page="include/footer.jsp"/>
 </body>

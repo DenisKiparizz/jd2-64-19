@@ -14,7 +14,9 @@ import java.util.Optional;
 
 @WebServlet(urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
-    private UserInterface userService = new UserLogic().getInstance();
+
+
+    private final UserInterface userService = new UserLogic().getInstance();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -33,17 +35,20 @@ public class LoginServlet extends HttpServlet {
             error = true;
             errorMassage = "Empty USERNAME and PASSWORD";
         } else {
-            Optional<User> user1 = userService.getUser(name, password);
-            if (user1.isEmpty()) {
+            User user1 = userService.getUser(name,password);
+            if (user1==null) {
                 error = true;
                 errorMassage = "Wrong EMAIL or PASSWORD. Try one more time";
             } else {
                 req.getSession().setAttribute("user", user1);
             }
+
         }
         if (error) {
             req.setAttribute("Error", errorMassage);
+            //userName
             req.setAttribute("user", new User(name, password));
+            //userName
             req.getRequestDispatcher("WEB-INF/jsp/login.jsp").forward(req, resp);
 
         } else

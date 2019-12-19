@@ -8,16 +8,13 @@ public class Model {
     private Long id;
     public volatile int nomber;
 
-
     public int getNomber() {
         return nomber;
     }
 
     public void setNomber(int nomber) {
         this.nomber = nomber;
-
     }
-
     public Model(String nameOfService, String description, Long id ){
         this.nameOfService = nameOfService;
         this.id = id;

@@ -4,7 +4,6 @@ import by.it.academy.ob.model.User;
 
 
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class UserLogic implements UserInterface {
@@ -21,14 +20,14 @@ public UserInterface getInstance(){
     return INSTANCE;
 }
 
+
     @Override
-    public Optional<User> getUser(String name, String password) {
+    public User getUser(String name, String password) {
         User user = userList.get(name);
         if (user != null && password.equals(user.getPassword())) {
-            return Optional.of(user);
+            return  user;
         } else {
-            return Optional.empty();
+            return null;
         }
-}
-
+    }
 }

@@ -12,6 +12,8 @@ public class User {
         this.password = password;
         this.role = "user";
     }
+    public User(){
+    }
 
     public String getRole() {
         return role;
@@ -51,7 +53,6 @@ public class User {
         return getUserName().equals(user.getUserName()) &&
                 getPassword().equals(user.getPassword());
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(getUserName(), getPassword());

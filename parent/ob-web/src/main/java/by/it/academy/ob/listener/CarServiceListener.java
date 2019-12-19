@@ -13,7 +13,6 @@ public class CarServiceListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent sce) {
         loger.info("Context initialized");
     }
-
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
         loger.info("Context destroyed");
