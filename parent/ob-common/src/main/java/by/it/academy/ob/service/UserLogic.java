@@ -1,0 +1,33 @@
+package by.it.academy.ob.service;
+
+import by.it.academy.ob.model.User;
+
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+public class UserLogic implements UserInterface {
+
+private static final UserInterface INSTANCE = new UserLogic();
+private Map<String, User> userList = new ConcurrentHashMap<>();
+
+public UserLogic(){
+    userList.put("Admin",new User("Admin","12345","admin"));
+    userList.put("User",new User("User","54321","user"));
+}
+
+public UserInterface getInstance(){
+    return INSTANCE;
+}
+
+
+    @Override
+    public User getUser(String name, String password) {
+        User user = userList.get(name);
+        if (user != null && password.equals(user.getPassword())) {
+            return  user;
+        } else {
+            return null;
+        }
+    }
+}

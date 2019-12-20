@@ -1,7 +1,6 @@
 package by.it.academy.ob.servlet;
 
-import by.it.academy.ob.service.ServiceInterface;
-import by.it.academy.ob.service.ServiceLogic;
+
 import by.it.academy.ob.service.ServiceInterface;
 import by.it.academy.ob.service.ServiceLogic;
 
@@ -18,7 +17,7 @@ public class DeliteModelServlet extends HttpServlet {
     private ServiceInterface service = ServiceLogic.getService();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/WEB-INF/showListServices.jsp").forward(req,resp);
+        req.getRequestDispatcher("/WEB-INF/jsp/car_service_orders/showListServices.jsp").forward(req,resp);
        doPost(req,resp);
     }
 

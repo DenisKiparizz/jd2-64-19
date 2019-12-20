@@ -4,32 +4,31 @@ import by.it.academy.ob.model.Model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicLong;
 
 public class ServiceLogic implements ServiceInterface {
     public static final ServiceInterface INSTANCE = new ServiceLogic();
     public final List<Model> list;
-    private Long id;
+    private final AtomicLong id = new AtomicLong(100);
     private int nomber;
-
 
     public static ServiceInterface getService() {
         return INSTANCE;
     }
 
     public ServiceLogic() {
-        id = 100L;
         list = new ArrayList<>();
     }
 
     @Override
     public List<Model> getListServices() {
-        return list;
+      return list;
     }
 
     @Override
     public void addNewService(Model task) {
         task.setNomber(nomber++);
-        task.setId(id++);
+        task.setId(id.incrementAndGet());
         list.add(task);
     }
 
@@ -38,7 +37,6 @@ public class ServiceLogic implements ServiceInterface {
         for (Model a : list) {
             if (a.getId().equals(model.getId())) {
                 a.setNomber(nomber++);
-                a.setId(id++);
                 a.setNameOfService(model.getNameOfService());
                 a.setDescription(model.getDescription());
             }
@@ -49,5 +47,4 @@ public class ServiceLogic implements ServiceInterface {
     public void deliteService1(Long id) {
         list.removeIf(a -> a.getId().equals(id));
     }
-
 }

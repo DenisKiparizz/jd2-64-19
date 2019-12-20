@@ -17,7 +17,7 @@ public class AddServiceServlet extends HttpServlet {
     private ServiceInterface service = ServiceLogic.getService();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/WEB-INF/addService.jsp").forward(req,resp);
+        req.getRequestDispatcher("/WEB-INF/jsp/car_service_orders/addService.jsp").forward(req,resp);
     }
 
     @Override

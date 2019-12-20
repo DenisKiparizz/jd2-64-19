@@ -1,28 +1,43 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="a" uri="/WEB-INF/tablib/auth.tld" %>
 <html>
 <head>
     <title>ListService</title>
 </head>
 <body>
+<%@include file="../include/header.jsp"%>
+<%@include file="../include/menu.jsp"%>
 <h2>There are your orders</h2>
-<table>
+<table class="title title - striped">
+    <thead>
     <tr>
-        <td>No</td>
-        <td>Name</td>
-        <td>Description</td>
-        <td>Id</td>
+        <th>#</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Id</th>
     </tr>
+    </thead>
+    <tbody>
+
+    <%--    <jsp:useBean id="list" scope="request" type="java.util.List"/>--%>
     <c:forEach items="${list}" var="models">
         <tr>
             <td><c:out value="${models.nomber}"/></td>
             <td><c:out value="${models.nameOfService}"/></td>
             <td><c:out value="${models.description}"/></td>
             <td><c:out value="${models.id}"/></td>
-
+            <td>
+                <a:auth path="/dell">
+                    <form method="post">
+                        <a href="${pageContext.request.contextPath}/dell">DELL</a>
+                    </form>
+                </a:auth>
+            </td>
         </tr>
     </c:forEach>
-
+    </tbody>
 </table>
 
 

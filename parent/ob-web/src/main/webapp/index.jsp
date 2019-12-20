@@ -8,8 +8,8 @@
 <h1>West Coast Customs!</h1>
 <h2>Nice to see you in West  Coast Customs</h2>
 <h2>Make a choice</h2>
-<div>       <!-- content -->
-    <div>    <!-- buttons holder -->
+<div>
+    <div>
         <button onclick="location.href='/add'">Add new service</button>
         <button onclick="location.href='/list'">See service list</button>
     </div>
