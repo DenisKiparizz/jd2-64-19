@@ -23,7 +23,7 @@
             </th>
             <th>
                 <label>Password:
-                    <input type="password" name="password"><br/>
+                    <input type="password" name="password" value=""><br/>
                 </label>
             </th>
         </tr>

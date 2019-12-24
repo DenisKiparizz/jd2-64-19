@@ -46,9 +46,7 @@ public class LoginServlet extends HttpServlet {
         }
         if (error) {
             req.setAttribute("Error", errorMassage);
-            //userName
-            req.setAttribute("user", new User(name, password));
-            //userName
+            req.setAttribute("user", new User(name, ""));
             req.getRequestDispatcher("WEB-INF/jsp/login.jsp").forward(req, resp);
 
         } else

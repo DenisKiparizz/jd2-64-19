@@ -1,0 +1,9 @@
+create table Service_order
+(
+    id                  int          not null primary key auto_increment,
+    model               varchar(10)  not null,
+    type_of_model       varchar(20)  not null,
+    type_of_problem     varchar(20)  not null,
+    problem             varchar(20)  not null,
+    description_problem varchar(255) not null
+);
