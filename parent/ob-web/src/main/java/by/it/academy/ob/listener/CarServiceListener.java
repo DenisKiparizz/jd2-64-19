@@ -13,7 +13,6 @@ import java.util.ResourceBundle;
 @WebListener()
 public class CarServiceListener implements ServletContextListener {
     private static final Logger loger = LoggerFactory.getLogger(CarServiceListener.class);
-
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         loger.info("Context initialized");
