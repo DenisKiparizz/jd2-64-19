@@ -1,4 +1,4 @@
-package by.it.academy.ob.servlet;
+package by.it.academy.ob.servlet.user;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,6 +16,6 @@ public class LogoutServlet extends HttpServlet {
         if (session != null) {
             session.invalidate();
         }
-        resp.sendRedirect("/home");
+        resp.sendRedirect("/homePage");
     }
 }

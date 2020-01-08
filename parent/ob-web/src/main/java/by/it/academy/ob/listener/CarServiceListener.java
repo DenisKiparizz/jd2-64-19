@@ -4,13 +4,13 @@ import by.it.academy.ob.db.connection.pool.ServiceCarDataSource;
 import by.it.academy.ob.db.migration.DbMigration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+import javax.servlet.annotation.WebListener;
 import javax.sql.DataSource;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-
+@WebListener()
 public class CarServiceListener implements ServletContextListener {
     private static final Logger loger = LoggerFactory.getLogger(CarServiceListener.class);
 
@@ -24,7 +24,7 @@ public class CarServiceListener implements ServletContextListener {
             DbMigration.migrate(dataSource);
 
         } catch (ClassNotFoundException | SQLException e) {
-            loger.error("ERROR",e);
+            loger.error("ERROR666",e);
             throw new RuntimeException("Datasource initialisation error", e);
         }
     }

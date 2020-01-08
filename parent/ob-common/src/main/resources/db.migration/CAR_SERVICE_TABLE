@@ -1,9 +1,10 @@
-create table Service_order
+CREATE TABLE car
 (
-    id                  int          not null primary key auto_increment,
-    model               varchar(10)  not null,
-    type_of_model       varchar(20)  not null,
-    type_of_problem     varchar(20)  not null,
-    problem             varchar(20)  not null,
-    description_problem varchar(255) not null
+    Id              BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Make            VARCHAR(12)        NOT NULL,
+    Model           VARCHAR(20)        NOT NULL,
+    Type_of_body    VARCHAR(10)        NOT NULL,
+    Type_of_engine  VARCHAR(20)        NOT NULL,
+    Age             BIGINT             NOT NULL,
+    Value_of_engine DOUBLE             NOT NULL
 );
