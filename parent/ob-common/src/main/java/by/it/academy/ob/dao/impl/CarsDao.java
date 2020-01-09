@@ -11,10 +11,6 @@ import java.util.List;
 import java.util.Optional;
 
 public class CarsDao extends AbstractDAO implements CarsDAO {
-    private static final String URL = "jdbc:mysql://localhost:3306/test_db?useUnicode=true&useSSL=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-    private static final String USER_NAMME = "root";
-    private static final String PASSWORD = "root";
-
     public CarsDao() {
         super(LoggerFactory.getLogger(CarsDao.class));
     }
@@ -34,8 +30,7 @@ public class CarsDao extends AbstractDAO implements CarsDAO {
         ResultSet resultset = null;
         int resalt = 0;
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
-            try (Connection conn = DriverManager.getConnection(URL, USER_NAMME, PASSWORD);
+            try (Connection conn = getConnection();
                  PreparedStatement statement = conn.prepareStatement(INSERT_CAR, Statement.RETURN_GENERATED_KEYS)) {
                 statement.setString(1, cars.getMake());
                 statement.setString(2, cars.getModel());
@@ -48,6 +43,8 @@ public class CarsDao extends AbstractDAO implements CarsDAO {
                 while (resultset.next()) {
                     resalt = resultset.getInt(1);
                 }
+            } finally {
+                closeQuietly(resultset);
             }
         } catch (Exception ex) {
             System.out.println(ex);
@@ -60,8 +57,7 @@ public class CarsDao extends AbstractDAO implements CarsDAO {
         ResultSet resultSet = null;
         List<Cars> cars = new ArrayList<>();
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
-            try (Connection connection = DriverManager.getConnection(URL, USER_NAMME, PASSWORD);
+            try (Connection connection = getConnection();
                  PreparedStatement statement = connection.prepareStatement(SELECT_ALL, Statement.RETURN_GENERATED_KEYS)) {
                 resultSet = statement.executeQuery();
                 while (resultSet.next()) {
@@ -75,6 +71,8 @@ public class CarsDao extends AbstractDAO implements CarsDAO {
                     car.setAge(resultSet.getLong(6));
                     cars.add(car);
                 }
+            } finally {
+                closeQuietly(resultSet);
             }
         } catch (Exception e) {
             System.out.println("skno");
@@ -91,11 +89,9 @@ public class CarsDao extends AbstractDAO implements CarsDAO {
     public Long delete(Long id) throws SQLException {
         Long resalt = null;
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
-            try (Connection conn = DriverManager.getConnection(URL, USER_NAMME, PASSWORD);
+            try (Connection conn = getConnection();
                  PreparedStatement statement = conn.prepareStatement(DELETE_BY_ID, Statement.RETURN_GENERATED_KEYS)) {
                 statement.setLong(1, id);
-                //
                 return Long.parseLong(String.valueOf(statement.executeUpdate()));
             }
         } catch (Exception ex) {

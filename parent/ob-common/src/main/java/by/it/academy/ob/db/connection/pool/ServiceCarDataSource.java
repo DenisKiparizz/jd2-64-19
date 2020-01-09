@@ -34,9 +34,8 @@ public final class ServiceCarDataSource {
         check();
         return dataSource;
     }
-
     private static void check() throws SQLException {
-        if (dataSource != null) {
+        if (dataSource == null) {
             throw new SQLException("DataSource is EMPTY");
         }
     }

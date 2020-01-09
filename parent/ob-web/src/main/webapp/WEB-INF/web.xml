@@ -4,8 +4,11 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
                       http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+<!--    <listener>-->
+<!--        <listener-class>by.it.academy.ob.listener.CarServiceListener</listener-class>-->
+<!--    </listener>-->
     <welcome-file-list>
         <welcome-file>homePage</welcome-file>
     </welcome-file-list>
-
 </web-app>

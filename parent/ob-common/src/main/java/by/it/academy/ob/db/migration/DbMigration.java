@@ -1,5 +1,4 @@
 package by.it.academy.ob.db.migration;
-
 import org.flywaydb.core.Flyway;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
