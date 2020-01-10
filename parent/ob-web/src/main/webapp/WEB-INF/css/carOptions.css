@@ -1,0 +1,459 @@
+body {
+    background-image: url('https://previews.123rf.com/images/yavdat1/yavdat11609/yavdat1160900001/62157878-lights-on-blue-background-holiday-bokeh-abstract-christmas-background-festive-abstract-background-wi.jpg');
+    color: #fff;
+    text-align: left;
+    font-family: Arial, Helvetica;
+}
+
+/*.big {*/
+/*    font-size: 1.0em;*/
+/*}*/
+/*!* Custom dropdown *!*/
+/*.custom-dropdown {*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*    vertical-align: middle;*/
+/*    margin: 10px; !* demo only *!*/
+/*}*/
+
+/*.custom-dropdown select {*/
+/*    cursor:pointer;*/
+/*    background-color: #0007b9;*/
+/*    color: #fff;*/
+/*    font-size: inherit;*/
+/*    padding: .5em;*/
+/*    padding-right: 2.5em;*/
+/*    border: 0;*/
+/*    margin: 0;*/
+/*    border-radius: 3px;*/
+/*    text-indent: 0.01px;*/
+/*    text-overflow: '';*/
+/*    -webkit-appearance: button; !* hide default arrow in chrome OSX *!*/
+/*}*/
+
+/*body {*/
+/*    text-align: center;*/
+/*}*/
+
+/*.container {*/
+/*    width: 120px;*/
+/*    height: 300px;*/
+/*    margin: 0 auto;*/
+/*}*/
+
+/*svg {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
+
+/*path {*/
+/*    stroke-dasharray: 99.47578430175781;*/
+/*    stroke-dashoffset: -99.47578430175781;*/
+/*    fill: transparent;*/
+/*}*/
+
+/*svg.animate path {*/
+/*    animation: 1.7s ease forwards draw;*/
+/*    opacity:1;*/
+/*}*/
+
+/*@keyframes draw {*/
+/*    0% {*/
+/*        opacity: 1;*/
+/*        stroke-dashoffset: -99.47578430175781;*/
+/*        fill: transparent;*/
+/*        transform: translateY(0);*/
+/*    }*/
+
+/*    35% {*/
+/*        stroke-dashoffset: 0;*/
+/*        fill: transparent;*/
+/*    }*/
+
+/*    60% {*/
+/*        fill: #3da35a;*/
+/*        opacity: 1;*/
+/*        transform: translateY(0);*/
+/*    }*/
+
+/*    100% {*/
+/*        fill: #3da35a;*/
+/*        stroke-dashoffset: 0;*/
+/*        opacity: 0;*/
+/*        transform: translateY(-10px);*/
+/*    }*/
+/*}*/
+
+/*button {*/
+/*    cursor: pointer;*/
+/*    min-width: 100px;*/
+/*    padding: 15px 5px;*/
+/*    text-transform: uppercase;*/
+/*    vertical-align: middle;*/
+/*    background: #3da35a;*/
+/*    border: none;*/
+/*    color: #ffffff;*/
+/*    font-weight: 600;*/
+/*    border-radius: 5px;*/
+/*    box-shadow: 0 0 10px rgb(56,100,38);*/
+/*    transition: all 1s;*/
+/*}*/
+
+/*button:hover {*/
+/*    box-shadow: 0 0 25px rgb(56,100,38);*/
+/*}*/
+/*button:focus {*/
+/*    outline: none;*/
+/*}*/
+
+/*============================*/
+/* General
+/*============================*/
+html, body {
+    background: #999999;
+    font: 100% helvetica, arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    margin: 40px auto;
+    width: 100%;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#header {
+    border-bottom: 1px solid #eee;
+    margin: 0 0 20px;
+    overflow: hidden;
+    padding: 0 0 10px;
+}
+
+h1 {
+    color: #111;
+    float: left;
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+h2 {
+    color: #999;
+    float: right;
+    font-size: 11px;
+    font-weight: normal;
+    margin: 20px 0 0 0;
+}
+
+a {
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+    -moz-transition: all 300ms ease-out;
+    -webkit-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+
+a:hover {
+    color: #555;
+}
+
+/*!*============================*!*/
+/*!* Main Navigation*/
+/*!*============================*!*/
+/*#nav {*/
+/*    height: 100px;*/
+/*    line-height: 100px;*/
+/*    width: 100%;*/
+/*}*/
+
+/*#nav ul {*/
+/*    list-style: none;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+/*#nav li {*/
+/*    background: #333;*/
+/*    background-image: -o-linear-gradient(bottom, #222222 0%, #555555 100%);*/
+/*    background-image: -moz-linear-gradient(bottom, #222222 0%, #555555 100%);*/
+/*    background-image: -webkit-linear-gradient(bottom, #222222 0%, #555555 100%);*/
+/*    background-image: -ms-linear-gradient(bottom, #222222 0%, #555555 100%);*/
+/*    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #222222),color-stop(1, #555555));*/
+/*    background-image: linear-gradient(bottom, #222222 0%, #555555 100%);*/
+/*    float: left;*/
+/*    position: relative;*/
+/*    width: 20%;*/
+/*}*/
+
+/*#nav li:first-child, #nav li:first-child a {*/
+/*    -webkit-border-radius: 3px 0 0 3px;*/
+/*    -moz-border-radius: 3px 0 0 3px;*/
+/*    border-radius: 3px 0 0 3px;*/
+/*}*/
+/*#nav li:last-child, #nav li:last-child a {*/
+/*    -webkit-border-radius: 0 3px 3px 0;*/
+/*    -moz-border-radius: 0 3px 3px 0;*/
+/*    border-radius: 0 3px 3px 0;*/
+/*}*/
+
+/*#nav a {*/
+/*    border-right: 1px solid #222;*/
+/*    border-left: 1px solid #555;*/
+/*    color: #ccc;*/
+/*    display: block;*/
+/*    font-size: 14px;*/
+/*    height: 50px;*/
+/*    overflow: hidden;*/
+/*    text-align: center;*/
+/*    text-shadow: 0 -1px 0 #000;*/
+/*    -webkit-box-shadow: inset 0 0 10px transparent;*/
+/*    -moz-box-shadow: inset 0 0 10px transparent;*/
+/*}*/
+
+/*#nav a:after {*/
+/*    background: rgba(255,255,255,.07);*/
+/*    content: "";*/
+/*    height: 25px;*/
+/*    left: 0;*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*}*/
+
+/*#nav li:hover > a {*/
+/*    background: #333;*/
+/*    border-left-color: #222;*/
+/*    color: #fff;*/
+/*    text-shadow: 0 1px 0 #000;*/
+/*    -webkit-box-shadow: inset 0 0 10px #111;*/
+/*    -moz-box-shadow: inset 0 0 10px #111;*/
+/*    box-shadow: inset 0 0 10px #111;*/
+/*}*/
+/*#nav span {*/
+/*    position: relative;*/
+/*}*/
+
+/*#nav a:active span {*/
+/*    color: #ffd;*/
+/*    position: relative;*/
+/*    top: 1px;*/
+/*}*/
+
+/*#nav li:first-child a {*/
+/*    border-left: none;*/
+/*}*/
+
+/*#nav li:last-child a {*/
+/*    border-right: none;*/
+/*}*/
+
+/*.dropdown > a span:after {*/
+/*    border-top: 5px solid transparent;*/
+/*    border-bottom: 5px solid transparent;*/
+/*    border-left: 5px solid #ccc;*/
+/*    content: "";*/
+/*    right: -13px;*/
+/*    position: absolute;*/
+/*    top: 3px;*/
+/*}*/
+
+/*.dropdown:hover > a span:after {*/
+/*    border-left: 5px solid transparent;*/
+/*    border-right: 5px solid transparent;*/
+/*    border-top: 5px solid #fff;*/
+/*    content: "";*/
+/*    right: -15px;*/
+/*    position: absolute;*/
+/*    top: 6px;*/
+/*}*/
+
+/*!*============================*!*/
+/*!* Sub Navigation*/
+/*!*============================*!*/
+/*#nav ul ul {*/
+/*    opacity: 0;*/
+/*    position: absolute;*/
+/*    top: 50px;*/
+/*    visibility: hidden;*/
+/*    width: 0;*/
+/*    -moz-transition: all 300ms ease-out;*/
+/*    -webkit-transition: all 300ms ease-out;*/
+/*    -ms-transition: all 300ms ease-out;*/
+/*    transition: all 300ms ease-out;*/
+/*}*/
+
+/*#nav ul li:hover ul {*/
+/*    opacity: 1;*/
+/*    visibility: visible;*/
+/*    width: 100%;*/
+/*}*/
+
+/*#nav ul ul li {*/
+/*    background: #f3f3f3;*/
+/*    float: none;*/
+/*    line-height: 0;*/
+/*    width: 100%;*/
+/*}*/
+
+/*#nav ul ul li:nth-child(odd) {*/
+/*    background: #eee;*/
+/*}*/
+
+/*#nav ul ul li:first-child, #nav ul ul li:first-child a {*/
+/*    -webkit-border-radius: 0;*/
+/*    -moz-border-radius: 0;*/
+/*    border-radius: 0;*/
+/*}*/
+/*#nav ul ul li:last-child, #nav ul ul li:last-child a {*/
+/*    -webkit-border-radius: 0 0 3px 3px;*/
+/*    -moz-border-radius: 0 0 3px 3px;*/
+/*    border-radius: 0 0 3px 3px;*/
+/*}*/
+
+/*#nav ul ul li a {*/
+/*    border-right: none;*/
+/*    border-left: none;*/
+/*    border-top: 1px solid #fff;*/
+/*    color: #555;*/
+/*    font-size: 12px;*/
+/*    height: 36px;*/
+/*    line-height: 36px;*/
+/*    padding: 0 0 0 15px;*/
+/*    text-align: left;*/
+/*    text-shadow: 0 -1px 0 #eee;*/
+/*}*/
+
+/*#nav ul li ul li a:after {*/
+/*    background: rgba(0,0,0,.02);*/
+/*    content: "";*/
+/*    height: 18px;*/
+/*    left: 0;*/
+/*    position: absolute;*/
+/*    top: 19px;*/
+/*    width: 100%;*/
+/*}*/
+
+/*#nav ul ul li a:hover {*/
+/*    background: #ffd;*/
+/*    color: #111;*/
+/*    text-shadow: 0 1px 0 #fff;*/
+/*    -webkit-box-shadow: none;*/
+/*    -moz-box-shadow: none;*/
+/*    box-shadow: none;*/
+/*}*/
+
+/*#nav ul ul a:active span {*/
+/*    color: #111;*/
+/*    position: relative;*/
+/*    top: 1px;*/
+/*}*/
+
+
+
+
+
+
+
+/** {*/
+/*    outline: 0;*/
+/*    font-family: sans-serif*/
+/*}*/
+/*body {*/
+/*    background-color: #fafafa*/
+/*}*/
+/*span.msg,*/
+/*span.choose {*/
+/*    color: #555;*/
+/*    padding: 5px 0 10px;*/
+/*    display: inherit*/
+/*}*/
+/*.container {*/
+/*    width: 500px;*/
+/*    margin: 50px auto 0;*/
+/*    text-align: center*/
+/*}*/
+
+/*!*Styling Selectbox*!*/
+/*.dropdown {*/
+/*    width: 300px;*/
+/*    display: inline-block;*/
+/*    background-color: #fff;*/
+/*    border-radius: 5px;*/
+/*    box-shadow: 0 0 2px rgb(204, 204, 204);*/
+/*    transition: all .5s ease;*/
+/*    position: relative;*/
+/*    font-size: 14px;*/
+/*    color: #474747;*/
+/*    height: 100%;*/
+/*    text-align: left*/
+/*}*/
+/*.dropdown .select {*/
+/*    cursor: pointer;*/
+/*    display: block;*/
+/*    padding: 10px*/
+/*}*/
+/*.dropdown .select > i {*/
+/*    font-size: 13px;*/
+/*    color: #888;*/
+/*    cursor: pointer;*/
+/*    transition: all .3s ease-in-out;*/
+/*    float: right;*/
+/*    line-height: 20px*/
+/*}*/
+/*.dropdown:hover {*/
+/*    box-shadow: 0 0 4px rgb(204, 204, 204)*/
+/*}*/
+/*.dropdown:active {*/
+/*    background-color: #f8f8f8*/
+/*}*/
+/*.dropdown.active:hover,*/
+/*.dropdown.active {*/
+/*    box-shadow: 0 0 4px rgb(204, 204, 204);*/
+/*    border-radius: 5px 5px 0 0;*/
+/*    background-color: #f8f8f8*/
+/*}*/
+/*.dropdown.active .select > i {*/
+/*    transform: rotate(-90deg)*/
+/*}*/
+/*.dropdown .dropdown-menu {*/
+/*    position: absolute;*/
+/*    background-color: #fff;*/
+/*    width: 100%;*/
+/*    left: 0;*/
+/*    margin-top: 1px;*/
+/*    box-shadow: 0 1px 2px rgb(204, 204, 204);*/
+/*    border-radius: 0 1px 5px 5px;*/
+/*    overflow: hidden;*/
+/*    display: none;*/
+/*    max-height: 144px;*/
+/*    overflow-y: auto;*/
+/*    z-index: 9*/
+/*}*/
+/*.dropdown .dropdown-menu li {*/
+/*    padding: 10px;*/
+/*    transition: all .2s ease-in-out;*/
+/*    cursor: pointer*/
+/*}*/
+/*.dropdown .dropdown-menu {*/
+/*    padding: 0;*/
+/*    list-style: none*/
+/*}*/
+/*.dropdown .dropdown-menu li:hover {*/
+/*    background-color: #f2f2f2*/
+/*}*/
+/*.dropdown .dropdown-menu li:active {*/
+/*    background-color: #e2e2e2*/
+/*}*/
+
+
+
+
+
+
+
+
+
