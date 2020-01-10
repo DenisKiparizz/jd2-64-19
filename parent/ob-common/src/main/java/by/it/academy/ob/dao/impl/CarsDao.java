@@ -47,7 +47,7 @@ public class CarsDao extends AbstractDAO implements CarsDAO {
                 closeQuietly(resultset);
             }
         } catch (Exception ex) {
-            System.out.println(ex);
+          logger.error("===Add Crash===",ex);
         }
         return resalt;
     }
@@ -75,7 +75,7 @@ public class CarsDao extends AbstractDAO implements CarsDAO {
                 closeQuietly(resultSet);
             }
         } catch (Exception e) {
-            System.out.println("skno");
+            logger.error("===Get All Crash===",e);
         }
         return cars;
     }
@@ -95,7 +95,7 @@ public class CarsDao extends AbstractDAO implements CarsDAO {
                 return Long.parseLong(String.valueOf(statement.executeUpdate()));
             }
         } catch (Exception ex) {
-            System.out.println(ex);
+            logger.error("===Delete Crash===",ex);
         }
         return resalt;
     }

@@ -1,4 +1,4 @@
-package by.it.academy.ob.service.iml;
+package by.it.academy.ob.service.Impl;
 
 import by.it.academy.ob.model.Cars;
 import by.it.academy.ob.model.Services;
@@ -8,15 +8,15 @@ import by.it.academy.ob.service.ServicesInterface;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ServicesIML implements ServicesInterface {
-    public static final ServicesInterface INSTANCE = new ServicesIML();
+public class ServicesImpl implements ServicesInterface {
+    public static final ServicesInterface INSTANCE = new ServicesImpl();
     public final List<Services> servicesList;
     public static Cars car;
 
     public static ServicesInterface getInstance() {
         return INSTANCE;
     }
-    public ServicesIML() {
+    public ServicesImpl() {
         servicesList = new ArrayList<>();
     }
     @Override

@@ -3,8 +3,6 @@ package by.it.academy.ob.servlet;
 import by.it.academy.ob.dao.CarsDAO;
 import by.it.academy.ob.dao.impl.CarsDao;
 import by.it.academy.ob.model.Cars;
-import by.it.academy.ob.service.CarsInterface;
-import by.it.academy.ob.service.iml.CarsIml;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
