@@ -2,7 +2,7 @@ package by.it.academy.ob.servlet.user;
 
 import by.it.academy.ob.model.User;
 import by.it.academy.ob.service.UserInterface;
-import by.it.academy.ob.service.iml.UserIML;
+import by.it.academy.ob.service.Impl.UserImpl;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,7 +12,7 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = "/login")
 public class UserServlet extends HttpServlet {
-    private final UserInterface userInterface = new UserIML().getInstance();
+    private final UserInterface userInterface = new UserImpl().getInstance();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

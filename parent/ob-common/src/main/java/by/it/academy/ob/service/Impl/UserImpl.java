@@ -1,4 +1,4 @@
-package by.it.academy.ob.service.iml;
+package by.it.academy.ob.service.Impl;
 
 import by.it.academy.ob.model.User;
 import by.it.academy.ob.service.UserInterface;
@@ -7,12 +7,12 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
-public class UserIML implements UserInterface {
-    private static final UserInterface INSTANCE = new UserIML();
+public class UserImpl implements UserInterface {
+    private static final UserInterface INSTANCE = new UserImpl();
     private final Map<String, User> usersList = new ConcurrentHashMap<>();
     private AtomicLong id = new AtomicLong();
 
-    public UserIML()
+    public UserImpl()
     {
         usersList.put("Admin", new User("Admin", "12345", "admin"));
         usersList.put("User", new User("User", "12345", "user"));

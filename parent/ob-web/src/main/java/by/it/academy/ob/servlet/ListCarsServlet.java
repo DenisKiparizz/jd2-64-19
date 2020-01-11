@@ -4,7 +4,7 @@ import by.it.academy.ob.dao.CarsDAO;
 import by.it.academy.ob.dao.impl.CarsDao;
 import by.it.academy.ob.model.Cars;
 import by.it.academy.ob.service.CarsInterface;
-import by.it.academy.ob.service.iml.CarsIml;
+import by.it.academy.ob.service.Impl.CarsImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,7 +17,7 @@ import java.util.List;
 
 @WebServlet(urlPatterns = "/list")
 public class ListCarsServlet extends HttpServlet {
-    private CarsInterface cars = CarsIml.getInstance();
+    private CarsInterface cars = CarsImpl.getInstance();
     private CarsDAO service = CarsDao.getInstance();
 
 

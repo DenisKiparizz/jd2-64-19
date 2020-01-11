@@ -2,7 +2,7 @@ package by.it.academy.ob.servlet;
 
 import by.it.academy.ob.model.Services;
 import by.it.academy.ob.service.ServicesInterface;
-import by.it.academy.ob.service.iml.ServicesIML;
+import by.it.academy.ob.service.Impl.ServicesImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,7 +14,7 @@ import java.util.List;
 
 @WebServlet(urlPatterns = "/listService")
 public class ListServicesServlet extends HttpServlet {
-    private ServicesInterface instance = ServicesIML.getInstance();
+    private ServicesInterface instance = ServicesImpl.getInstance();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Services> list1 = instance.ListServices();

@@ -1,4 +1,4 @@
-package by.it.academy.ob.service.iml;
+package by.it.academy.ob.service.Impl;
 
 import by.it.academy.ob.service.CarsInterface;
 import by.it.academy.ob.model.Cars;
@@ -9,8 +9,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
-public class CarsIml implements CarsInterface {
-    public static final CarsInterface INSTANCE = new CarsIml();
+public class CarsImpl implements CarsInterface {
+    public static final CarsInterface INSTANCE = new CarsImpl();
     public final List<Cars> carsList;
     private final AtomicLong id = new AtomicLong(1);
 
@@ -20,7 +20,7 @@ public class CarsIml implements CarsInterface {
         return INSTANCE;
     }
 
-    public CarsIml() {
+    public CarsImpl() {
         carsList = new ArrayList<>();
     }
 
