@@ -24,7 +24,7 @@ public class CarServiceListener implements ServletContextListener {
             ServiceCarDataSource.configure(bundle);
             DataSource dataSource = ServiceCarDataSource.getDataSource();
             DbMigration.migrate(dataSource);
-
+//Throwable
         } catch (ClassNotFoundException | SQLException e) {
             loger.error("ERROR666", e);
             throw new RuntimeException("Datasource initialisation error", e);

@@ -10,7 +10,7 @@
     <modules>
         <module>ob-common</module>
         <module>ob-web</module>
-
+        <module>ob-hibernate</module>
     </modules>
 
     <packaging>pom</packaging>
