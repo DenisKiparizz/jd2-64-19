@@ -13,7 +13,7 @@
         <module>ob-hibernate</module>
     </modules>
 
-    <packaging>pom</packaging>
+    <packaging>pom</packaging>  
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
