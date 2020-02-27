@@ -29,7 +29,10 @@
     <logger name="by.it.academy" level="debug" additivity="false">
         <appender-ref ref="CONSOLE"/>
     </logger>
-
+    <logger name="org.hibernate.type.descriptor.sql" level="trace"
+            additivity="false">
+        <appender-ref ref="CONSOLE" />
+    </logger>
     <root level="info">
         <appender-ref ref="CONSOLE"/>
     </root>

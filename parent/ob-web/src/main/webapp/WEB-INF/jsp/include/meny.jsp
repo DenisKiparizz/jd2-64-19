@@ -10,10 +10,15 @@
 <div class="icon-bar">
     <h3 style="margin-top: 10px">
         <a href="${pageContext.request.contextPath}/">Home</a>
-        <a href="${pageContext.request.contextPath}/list">Car List</a>
-<%--        <a href="${pageContext.request.contextPath}/listService">Service List</a>--%>
-        <a href="${pageContext.request.contextPath}/addOrder">New Order</a>
+        //Delete
+        <a href="${pageContext.request.contextPath}/allCarModel">Model List</a>
+        //User
         <a href="${pageContext.request.contextPath}/login">Login</a>
         <a href="${pageContext.request.contextPath}/about">About</a>
+        <a href="${pageContext.request.contextPath}/newOrder">New Order</a>
+        <a href="${pageContext.request.contextPath}/addMake">Make an order</a>
+        //Admin
+        <a href="${pageContext.request.contextPath}/usersList">User LIst</a>
+        <a href="${pageContext.request.contextPath}/ordersList">Orders</a>
     </h3>
 </div>

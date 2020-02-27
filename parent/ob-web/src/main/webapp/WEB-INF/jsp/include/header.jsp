@@ -12,7 +12,9 @@
 
 <div style="float:  right; color: brown; padding-bottom: 35px; text-align: right;">
     <div>
-        <c:if test="${sessionScope.user!=null}"><a style="color: darkgoldenrod"> Nice to see you</a><b>${user.name}</b>
+        <c:if test="${sessionScope.user!=null}">
+            <a style="color: darkgoldenrod"> Nice to see you </a><b>${user.userName}
+            <a style="color: darkgoldenrod"> Your status is </a> <b>${user.role}</b></b>
             <div>
                 <button onclick="location.href='${pageContext.request.contextPath}/logout'">Quite account</button>
             </div>

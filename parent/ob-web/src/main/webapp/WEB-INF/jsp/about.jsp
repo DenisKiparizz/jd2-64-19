@@ -35,7 +35,7 @@
         There is the great quality or experience<br>
         If you came to us first time you shoud know some rules<br>
         1. First of all you have to enter<br>
-        2. You will be able to add cars<br>
+        2. You will be able to add orders<br>
         3. You will be able to add services for your car<br>
         4. In the future Xzibit will back from vacation and will be set prices for our services</h4><br>
 </div>

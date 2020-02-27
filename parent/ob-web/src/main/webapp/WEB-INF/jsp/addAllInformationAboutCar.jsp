@@ -96,7 +96,7 @@ Type of Body:
                     <option value="2010">2010</option><option value="2011">2011</option>
 
           </select>
-         <select name="valueOfEngine" size="1" title="Value Of Engine">
+         <select name="valueOfEngine" size="1" title="Value Of Engine" >
              <option value="">Value Of Engine</option>
                     <option value="1.0">1.0</option>
                     <option value="1.2">1.2</option>

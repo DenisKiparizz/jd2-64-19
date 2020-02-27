@@ -4,19 +4,41 @@ import java.util.Objects;
 
 public class User {
     private Long id;
-    private String name;
+    private String firstName;
+    private String secondName;
+    private String userName;
     private String password;
     private String role;
 
-    public User(String name, String password) {
-        this.name = name;
-        this.password = password;
-    }
-
-    public User(String name, String password, String role) {
-        this.name = name;
+    public User(String userName, String password) {
+        this.userName = userName;
         this.password = password;
         this.role = "user";
+    }
+
+    public User(String firstName, String secondName, String userName, String password) {
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.userName = userName;
+        this.password = password;
+        this.role = "user";
+    }
+
+    public User(String firstName, String secondName, String userName, String password, String role) {
+        this(firstName, secondName, userName, password);
+        this.role = role;
+    }
+
+    public User() {
+    }
+
+    public User(Long id, String firstName, String secondName, String userName, String password, String role) {
+        this.id = id;
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.userName = userName;
+        this.password = password;
+        this.role = role;
     }
 
     public Long getId() {
@@ -27,12 +49,28 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getSecondName() {
+        return secondName;
+    }
+
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getPassword() {
@@ -57,13 +95,15 @@ public class User {
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
         return getId().equals(user.getId()) &&
-                getName().equals(user.getName()) &&
+                getFirstName().equals(user.getFirstName()) &&
+                getSecondName().equals(user.getSecondName()) &&
+                getUserName().equals(user.getUserName()) &&
                 getPassword().equals(user.getPassword()) &&
                 getRole().equals(user.getRole());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getName(), getPassword(), getRole());
+        return Objects.hash(getId(), getFirstName(), getSecondName(), getUserName(), getPassword(), getRole());
     }
 }

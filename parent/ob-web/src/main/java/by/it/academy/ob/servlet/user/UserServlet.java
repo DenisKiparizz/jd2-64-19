@@ -1,8 +1,9 @@
 package by.it.academy.ob.servlet.user;
 
+
 import by.it.academy.ob.model.User;
-import by.it.academy.ob.service.UserInterface;
-import by.it.academy.ob.service.Impl.UserImpl;
+import by.it.academy.ob.service.Impl.User2Impl;
+import by.it.academy.ob.service.User2Interface;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,7 +13,7 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = "/login")
 public class UserServlet extends HttpServlet {
-    private final UserInterface userInterface = new UserImpl().getInstance();
+    private  User2Interface userInterface = User2Impl.getInstance();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -21,28 +22,29 @@ public class UserServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String name = req.getParameter("name");
+        String username = req.getParameter("userName");
         String password = req.getParameter("password");
-        User user = new User(name, password);
 
-        String errorMsg = "";
+        String errorMassage = "";
         boolean error = false;
 
-        if (name == null || name.length() == 0 || password == null || password.length() == 0) {
+        if (username == null || username.length() == 0) {
             error = true;
-            errorMsg = "Empty USERNAME and PASSWORD";
+            errorMassage = "Empty username";
+        } else if (password == null || password.length() == 0) {
+            error = true;
+            errorMassage = "Empty password";
         } else {
-            User user1 = userInterface.getUser(name, password);
-            if (user1 == null) {
+            User user = userInterface.findUser(username, password);
+            if (user ==null) {
                 error = true;
-                errorMsg = "Wrong EMAIL or PASSWORD. Try one more time";
+                errorMassage = "Dont have this one";
             } else {
-                req.getSession().setAttribute("user", user1);
+                req.getSession().setAttribute("user", user);
             }
         }
         if (error) {
-            req.setAttribute("ERROR666", errorMsg);
-            req.setAttribute("user", new User(name, "password"));
+            req.setAttribute("ERROR666", errorMassage);
             req.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(req, resp);
         } else
             resp.sendRedirect(req.getContextPath() + "/homePage");

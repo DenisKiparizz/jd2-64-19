@@ -17,7 +17,6 @@ public class AuthTag extends ConditionalTagSupport {
         User user = (User) session.getAttribute("user");
         return user != null && user.getRole().equals("admin");
     }
-
     public void setPath(String path) {
         this.path = path;
     }

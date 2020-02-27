@@ -1,9 +1,8 @@
 package by.it.academy.ob.dao;
 
-import by.it.academy.ob.entity.Person;
+import OneToOne.employ.Person;
 
 import java.io.Serializable;
-import java.util.List;
 
 public interface PersonDao {
 

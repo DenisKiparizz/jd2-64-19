@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.Optional;
 
 @WebFilter(urlPatterns = "/*", dispatcherTypes = DispatcherType.REQUEST)
 public class AuthFilter extends HttpFilter {
@@ -32,6 +31,7 @@ public class AuthFilter extends HttpFilter {
                 && !req.getRequestURI().endsWith("/")
                 && !req.getRequestURI().endsWith("/homePage")
                 && !req.getRequestURI().endsWith("/about")
+                && !req.getRequestURI().endsWith("/registration")
                 && !req.getRequestURI().endsWith("/login")) {
             resp.sendRedirect(req.getContextPath() + "/login");
 

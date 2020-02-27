@@ -1,210 +1,59 @@
-2020-01-16 10:24:23,655 ERROR by.it.academy.ob.util.HibernateUtil [main] Failed to create SessionFactory
-org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [by.it.academy.ob.entity.CarPerson]
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:133)
-	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.<init>(AnnotationMetadataSourceProcessorImpl.java:109)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.<init>(MetadataBuildingProcess.java:155)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:149)
+2020-02-27 11:12:43,625 ERROR by.it.academy.ob.util.HibernateUtil [main] Failed to create SessionFactory
+org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:175)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118)
 	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
 	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:473)
 	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:84)
 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:689)
 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:724)
-	at by.it.academy.ob.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:15)
-	at by.it.academy.ob.util.HibernateUtil.<clinit>(HibernateUtil.java:12)
-	at by.it.academy.ob.App.main(App.java:10)
-Caused by: java.lang.ClassNotFoundException: Could not load requested class : by.it.academy.ob.entity.CarPerson
-	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:210)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
-	at java.base/java.lang.Class.forName0(Native Method)
-	at java.base/java.lang.Class.forName(Class.java:415)
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:130)
-	... 11 common frames omitted
-2020-01-16 10:27:03,951 ERROR by.it.academy.ob.util.HibernateUtil [main] Failed to create SessionFactory
-org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [by.it.academy.ob.entity.CarPerson]
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:133)
-	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.<init>(AnnotationMetadataSourceProcessorImpl.java:109)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.<init>(MetadataBuildingProcess.java:155)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:149)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:473)
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:84)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:689)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:724)
-	at by.it.academy.ob.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:15)
-	at by.it.academy.ob.util.HibernateUtil.<clinit>(HibernateUtil.java:12)
-	at by.it.academy.ob.App.main(App.java:10)
-Caused by: java.lang.ClassNotFoundException: Could not load requested class : by.it.academy.ob.entity.CarPerson
-	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:210)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
-	at java.base/java.lang.Class.forName0(Native Method)
-	at java.base/java.lang.Class.forName(Class.java:415)
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:130)
-	... 11 common frames omitted
-2020-01-16 10:34:22,226 ERROR by.it.academy.ob.util.HibernateUtil [main] Failed to create SessionFactory
-org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [by.it.academy.ob.entity.CarPerson]
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:133)
-	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.<init>(AnnotationMetadataSourceProcessorImpl.java:109)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.<init>(MetadataBuildingProcess.java:155)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:149)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:473)
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:84)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:689)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:724)
-	at by.it.academy.ob.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:15)
-	at by.it.academy.ob.util.HibernateUtil.<clinit>(HibernateUtil.java:12)
-	at by.it.academy.ob.App.main(App.java:10)
-Caused by: java.lang.ClassNotFoundException: Could not load requested class : by.it.academy.ob.entity.CarPerson
-	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:210)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
-	at java.base/java.lang.Class.forName0(Native Method)
-	at java.base/java.lang.Class.forName(Class.java:415)
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:130)
-	... 11 common frames omitted
-2020-01-16 10:39:20,409 ERROR by.it.academy.ob.util.HibernateUtil [main] Failed to create SessionFactory
-org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [by.it.academy.ob.entity.CarPerson]
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:133)
-	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.<init>(AnnotationMetadataSourceProcessorImpl.java:109)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.<init>(MetadataBuildingProcess.java:155)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:149)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:473)
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:84)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:689)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:724)
-	at by.it.academy.ob.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:15)
-	at by.it.academy.ob.util.HibernateUtil.<clinit>(HibernateUtil.java:12)
-	at by.it.academy.ob.App.main(App.java:10)
-Caused by: java.lang.ClassNotFoundException: Could not load requested class : by.it.academy.ob.entity.CarPerson
-	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:210)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
-	at java.base/java.lang.Class.forName0(Native Method)
-	at java.base/java.lang.Class.forName(Class.java:415)
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:130)
-	... 11 common frames omitted
-2020-01-16 10:43:36,866 ERROR by.it.academy.ob.util.HibernateUtil [main] Failed to create SessionFactory
-org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [by.it.academy.ob.entity.CarPerson]
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:133)
-	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.<init>(AnnotationMetadataSourceProcessorImpl.java:109)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.<init>(MetadataBuildingProcess.java:155)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:149)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:473)
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:84)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:689)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:724)
-	at by.it.academy.ob.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:15)
-	at by.it.academy.ob.util.HibernateUtil.<clinit>(HibernateUtil.java:12)
-	at by.it.academy.ob.App.main(App.java:10)
-Caused by: java.lang.ClassNotFoundException: Could not load requested class : by.it.academy.ob.entity.CarPerson
-	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:210)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
-	at java.base/java.lang.Class.forName0(Native Method)
-	at java.base/java.lang.Class.forName(Class.java:415)
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:130)
-	... 11 common frames omitted
-2020-01-16 10:50:57,767 ERROR by.it.academy.ob.util.HibernateUtil [main] Failed to create SessionFactory
-org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [by.it.academy.ob.entity.CarPerson]
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:133)
-	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.<init>(AnnotationMetadataSourceProcessorImpl.java:109)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.<init>(MetadataBuildingProcess.java:155)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:149)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:473)
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:84)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:689)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:724)
-	at by.it.academy.ob.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:15)
-	at by.it.academy.ob.util.HibernateUtil.<clinit>(HibernateUtil.java:12)
-	at by.it.academy.ob.App.main(App.java:10)
-Caused by: java.lang.ClassNotFoundException: Could not load requested class : by.it.academy.ob.entity.CarPerson
-	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:210)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
-	at java.base/java.lang.Class.forName0(Native Method)
-	at java.base/java.lang.Class.forName(Class.java:415)
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:130)
-	... 11 common frames omitted
-2020-01-16 10:57:51,100 ERROR by.it.academy.ob.util.HibernateUtil [main] Failed to create SessionFactory
-org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [by.it.academy.ob.entity.CarPerson]
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:133)
-	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.<init>(AnnotationMetadataSourceProcessorImpl.java:109)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.<init>(MetadataBuildingProcess.java:155)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:149)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:473)
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:84)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:689)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:724)
-	at by.it.academy.ob.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:15)
-	at by.it.academy.ob.util.HibernateUtil.<clinit>(HibernateUtil.java:12)
-	at by.it.academy.ob.App.main(App.java:10)
-Caused by: java.lang.ClassNotFoundException: Could not load requested class : by.it.academy.ob.entity.CarPerson
-	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:210)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
-	at java.base/java.lang.Class.forName0(Native Method)
-	at java.base/java.lang.Class.forName(Class.java:415)
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:130)
-	... 11 common frames omitted
-2020-01-16 11:03:50,494 ERROR by.it.academy.ob.util.HibernateUtil [main] Failed to create SessionFactory
-org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [by.it.academy.ob.entity.CarPerson]
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:133)
-	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.<init>(AnnotationMetadataSourceProcessorImpl.java:109)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.<init>(MetadataBuildingProcess.java:155)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:149)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:473)
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:84)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:689)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:724)
-	at by.it.academy.ob.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:15)
-	at by.it.academy.ob.util.HibernateUtil.<clinit>(HibernateUtil.java:12)
-	at by.it.academy.ob.App.main(App.java:10)
-Caused by: java.lang.ClassNotFoundException: Could not load requested class : by.it.academy.ob.entity.CarPerson
-	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:210)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
-	at java.base/java.lang.Class.forName0(Native Method)
-	at java.base/java.lang.Class.forName(Class.java:415)
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:130)
-	... 11 common frames omitted
-2020-01-16 11:51:10,935 ERROR by.it.academy.ob.util.HibernateUtil [main] Failed to create SessionFactory
-org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [by.it.academy.ob.entity.CarPerson]
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:133)
-	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.<init>(AnnotationMetadataSourceProcessorImpl.java:109)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.<init>(MetadataBuildingProcess.java:155)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:149)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:473)
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:84)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:689)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:724)
-	at by.it.academy.ob.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:15)
-	at by.it.academy.ob.util.HibernateUtil.<clinit>(HibernateUtil.java:12)
-	at by.it.academy.ob.App.main(App.java:10)
-Caused by: java.lang.ClassNotFoundException: Could not load requested class : by.it.academy.ob.entity.CarPerson
-	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:210)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
-	at java.base/java.lang.Class.forName0(Native Method)
-	at java.base/java.lang.Class.forName(Class.java:415)
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:130)
-	... 11 common frames omitted
-2020-01-16 12:02:46,372 ERROR by.it.academy.ob.util.HibernateUtil [main] Failed to create SessionFactory
-java.lang.IllegalArgumentException: Unrecognized legacy `hibernate.hbm2ddl.auto` value : `delete`
-	at org.hibernate.tool.schema.Action.interpretHbm2ddlSetting(Action.java:181)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator$ActionGrouping.interpret(SchemaManagementToolCoordinator.java:490)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:53)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:320)
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:462)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:708)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:724)
-	at by.it.academy.ob.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:15)
-	at by.it.academy.ob.util.HibernateUtil.<clinit>(HibernateUtil.java:12)
-	at by.it.academy.ob.App.main(App.java:10)
+	at by.it.academy.ob.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:12)
+	at by.it.academy.ob.util.HibernateUtil.<clinit>(HibernateUtil.java:9)
+	at by.it.academy.ob.car_service.HQL.main(HQL.java:16)
+Caused by: org.hibernate.exception.SQLGrammarException: Error calling Driver#connect
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:118)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:41)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:58)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:331)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:250)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:228)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:369)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:98)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:73)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:107)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:145)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 16 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'westcost'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:38)
+	... 31 common frames omitted
+2020-02-27 11:31:09,443 ERROR by.it.academy.ob.car_service.HQL [main] [User(id=1, name=Denis, last_name=Solodkiy, age=25), User(id=2, name=Donald, last_name=Tramp, age=73)]
+2020-02-27 11:33:46,012 ERROR by.it.academy.ob.car_service.HQL [main] [User(id=1, name=Denis, last_name=Solodkiy, age=25), User(id=2, name=Donald, last_name=Tramp, age=73), User(id=3, name=Denis, last_name=Solodkiy, age=25), User(id=4, name=Donald, last_name=Tramp, age=73)]
+2020-02-27 11:41:22,757 ERROR by.it.academy.ob.car_service.HQL [main] [User(id=1, name=Denis, last_name=Solodkiy, age=25), User(id=2, name=Donald, last_name=Tramp, age=73), User(id=3, name=Denis, last_name=Solodkiy, age=25), User(id=4, name=Donald, last_name=Tramp, age=73), User(id=5, name=Denis, last_name=Solodkiy, age=25), User(id=6, name=Donald, last_name=Tramp, age=73)]
+2020-02-27 11:42:35,775 ERROR by.it.academy.ob.car_service.HQL [main] [User(id=1, name=Denis, last_name=Solodkiy, age=25), User(id=2, name=Donald, last_name=Tramp, age=73), User(id=3, name=Denis, last_name=Solodkiy, age=25), User(id=4, name=Donald, last_name=Tramp, age=73), User(id=5, name=Denis, last_name=Solodkiy, age=25), User(id=6, name=Donald, last_name=Tramp, age=73), User(id=7, name=Denis, last_name=Solodkiy, age=25), User(id=8, name=Donald, last_name=Tramp, age=73)]
+2020-02-27 11:43:33,284 ERROR by.it.academy.ob.car_service.HQL [main] [User(id=1, name=Denis, last_name=Solodkiy, age=25), User(id=2, name=Donald, last_name=Tramp, age=73)]
+2020-02-27 11:44:19,939 ERROR by.it.academy.ob.car_service.HQL [main] [User(id=1, name=Denis, last_name=Solodkiy, age=25), User(id=2, name=Donald, last_name=Tramp, age=73)]
+2020-02-27 11:45:25,310 ERROR by.it.academy.ob.car_service.HQL [main] [User(id=1, name=Denis, last_name=Solodkiy, age=25), User(id=2, name=Donald, last_name=Tramp, age=73)]
+2020-02-27 11:46:40,974 ERROR by.it.academy.ob.car_service.HQL [main] [User(id=1, name=Denis, last_name=Solodkiy, age=25), User(id=2, name=Donald, last_name=Tramp, age=73)]

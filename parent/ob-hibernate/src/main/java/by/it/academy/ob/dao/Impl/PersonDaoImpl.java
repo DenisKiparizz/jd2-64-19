@@ -1,14 +1,12 @@
 package by.it.academy.ob.dao.Impl;
 
 import by.it.academy.ob.dao.PersonDao;
-import by.it.academy.ob.entity.Person;
+import OneToOne.employ.Person;
 import by.it.academy.ob.util.HibernateUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.hibernate.HibernateException;
 import org.hibernate.Session;
 
 import java.io.Serializable;
-import java.util.List;
 
 @Slf4j
 public class PersonDaoImpl implements PersonDao {
@@ -16,7 +14,6 @@ public class PersonDaoImpl implements PersonDao {
 
     public static PersonDaoImpl getInstance() {
         return INSTANCE;
-
     }
 
     @Override

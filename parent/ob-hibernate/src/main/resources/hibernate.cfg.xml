@@ -11,6 +11,19 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">create</property>
-        <mapping class="by.it.academy.ob.entity.Person"/>
+<!--        <property name="hbm2ddl.auto">update</property>-->
+
+        <mapping class="OneToOne.employ.Person"/>
+        <mapping class="OneToOne.employ.Employee"/>
+        <mapping class="OneToOne.employ.EmployDetails"/>
+        <mapping class="OneToOne.employ.Departament"/>
+        <mapping class="OneToOne.employ.Meeting"/>
+
+        <mapping class="by.it.academy.ob.car_service.entity.Car"/>
+        <mapping class="by.it.academy.ob.car_service.entity.OrderForm"/>
+        <mapping class="by.it.academy.ob.car_service.entity.User"/>
+        <mapping class="by.it.academy.ob.car_service.entity.Service"/>
+        <mapping class="by.it.academy.ob.car_service.entity.ModelCar"/>
+
     </session-factory>
 </hibernate-configuration>

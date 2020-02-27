@@ -11,9 +11,10 @@
         <module>ob-common</module>
         <module>ob-web</module>
         <module>ob-hibernate</module>
+        <module>ob-spring1</module>
     </modules>
 
-    <packaging>pom</packaging>  
+    <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -71,6 +72,11 @@
     </build>
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>5.2.3.RELEASE</version>
+            </dependency>
             <dependency>
                 <groupId>org.flywaydb</groupId>
                 <artifactId>flyway-core</artifactId>
